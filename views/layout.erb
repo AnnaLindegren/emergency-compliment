@@ -1,13 +1,18 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 
 <head>
-<title>Cute Animals and Compliments</title>
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+<title>GIFs and Shit</title>
 </head>
 <body>
-
-	<%= yield %>
-
+	<div class="container">
+		<body style="background-color:<%=@color%>">
+		<h2>GIFs and Shit</h2>
+		<%= yield %>
+	</div>
 </body>
 </html>
 
