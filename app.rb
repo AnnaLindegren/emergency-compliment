@@ -4,7 +4,7 @@ require './lib/compliment'
 
 class App < Sinatra::Application
 
-  get '/compliments' do 
+  get '/' do 
     @message = [
       "You seem awesome. I'm gonna follow you on twitter.",
       "You look great, even if you are balding a bit.",
