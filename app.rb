@@ -4,6 +4,8 @@ require './lib/compliment'
 
 class App < Sinatra::Application
 
+  enable :sessions
+  
   get '/' do 
     @message = [
       "You seem awesome. I'm gonna follow you on twitter.",
@@ -16,12 +18,11 @@ class App < Sinatra::Application
       "Your magic deck is unbeatable!", 
       "I'd trade a black lotus card for you!"].sample
     @image = [
-      "brad_pitt.gif",
-      "colbert_nothing_wrong.gif",
-      "patrick_stewart.gif",
-      "super_star.gif",
-      "tina_fey.gif"].sample
-
+      "img/brad_pitt.gif",
+      "img/colbert_nothing_wrong.gif",
+      "img/patrick_stewart.gif",
+      "img/super_star.gif",
+      "img/tina_fey.gif"].sample
     @color = [
       "#007c7c",
       "#ff5b51",

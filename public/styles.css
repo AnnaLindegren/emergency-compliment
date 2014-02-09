@@ -1,4 +1,3 @@
-
 @import url(http://fonts.googleapis.com/css?family=Text+Me+One);
 
 header {
@@ -10,9 +9,14 @@ body {
 }
 
 h1 {
-	font: normal 58px 'Text Me One', sans-serif;
+	font: normal 52px 'Text Me One', sans-serif;
 }
 
 h2 {
 	font: bold 28px 'Text Me One', sans-serif;
 }
+
+#another_compliment {
+  font: normal 18px 'Text Me One', sans-serif;
+}
+
