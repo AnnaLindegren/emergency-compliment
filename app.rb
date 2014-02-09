@@ -3,8 +3,6 @@ Bundler.require
 require './lib/compliment'
 
 class App < Sinatra::Application
-
-  enable :sessions
   
   get '/' do 
     @message = [
