@@ -13,12 +13,14 @@ class Compliment
       "Good job being you!", 
       "Your magic deck is unbeatable!", 
       "I'd trade a black lotus card for you!"]
+  
   IMAGES = [
       "img/brad_pitt.gif",
       "img/colbert_nothing_wrong.gif",
       "img/patrick_stewart.gif",
       "img/super_star.gif",
       "img/tina_fey.gif"]
+  
   COLORS = [
       "#007c7c",
       "#ff5b51",
