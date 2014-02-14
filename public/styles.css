@@ -1,13 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Text+Me+One);
 
+body {
+  text-align: center;
+}
+
 h1 {
-	font: normal 52px 'Text Me One', sans-serif;
+	font: normal 60px 'Text Me One', sans-serif;
 }
 
 h2 {
 	font: bold 28px 'Text Me One', sans-serif;
 }
 
-#another_compliment {
-  font: normal 18px 'Text Me One', sans-serif;
+#another {
+  font: normal 24px 'Text Me One', sans-serif;
 }
