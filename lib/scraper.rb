@@ -1,10 +1,10 @@
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
-
+require 'yaml'
 
 class Scraper
-  attr_reader :html
+  attr_reader :html, :compliments
 
   def initialize(url)
   download = open(url)
@@ -12,8 +12,10 @@ class Scraper
   end
 
   def get_compliments
-    html.search('div.post-body').collect do |compliment|
-      puts compliment.text
+    @compliments = html.search('div.post-body').map {|item| item.text.gsub(/\d+\./, "") }
+
+    File.open("compliments.yaml", "w") do |file|
+      file.puts YAML::dump(compliments)
     end
   end
 
