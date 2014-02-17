@@ -1,38 +1,8 @@
 class Compliment
 
-  attr_reader :message, :image, :color
-  
-  MESSAGES = [
-      "You're awesome!",
-      "I'm gonna follow you on twitter.",
-      "You look great, even if you are balding a bit.",
-      "Call me, maybe?",
-      "Damn, you fine!", 
-      "You deserve donuts!",
-      "I like the way you move!", 
-      "Good job being you!", 
-      "Your magic deck is unbeatable!", 
-      "I'd trade a black lotus card for you!",
-      "You deserve a promotion!",
-      "Good effort!",
-      "What a fine sweater!",
-      "I appreciate all of your opinions.",
-      "I like your style.",
-      "With your creative wit, I'm sure you could come up with better compliments than me.",
-      "Your T-shirt smells fresh.",
-      "I love what you've done with the place.",
-      "You are like a spring flower; beautiful and vivacious.",
-      "I am utterly disarmed by your wit.",
-      "I really enjoy the way you pronounce the word 'ruby'.",
-      "You complete me.",
-      "Well done!",
-      "I like your Facebook status.",
-      "You should be a poster child for poster children.",
-      "You have a good web-surfing stance.",
-      "Nice motor control!",
-      "You have a good taste in websites.",
-      "Your mouse told me that you have very soft hands."]
-  
+  attr_reader :image, :color
+  attr_accessor :message
+
   IMAGES = [
       "img/brad_pitt.gif",
       "img/colbert_nothing_wrong.gif",
@@ -74,8 +44,8 @@ class Compliment
       "#eb65a0",   
       "#000000"]
   
-  def initialize
-    @message = MESSAGES.sample
+  def initialize (compliment)
+    @message = compliment.sample
     @image = IMAGES.sample
     @color = COLORS.sample
   end

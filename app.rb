@@ -5,7 +5,13 @@ require './lib/compliment'
 class App < Sinatra::Application
   
   get '/' do 
-    new_compliment = Compliment.new
+    f = File.open('./lib/compliments.txt')
+    @compliments = Array.new
+    f.each_line do |line| 
+      @compliments << line
+    end
+
+    new_compliment = Compliment.new(@compliments)
     @message = new_compliment.message
     @image = new_compliment.image
     @color = new_compliment.color
@@ -13,4 +19,3 @@ class App < Sinatra::Application
   end
 
 end
-
