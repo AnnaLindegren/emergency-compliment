@@ -10,7 +10,6 @@ class App < Sinatra::Application
     f.each_line do |line| 
       @compliments << line
     end
-
     new_compliment = Compliment.new(@compliments)
     @message = new_compliment.message
     @image = new_compliment.image
