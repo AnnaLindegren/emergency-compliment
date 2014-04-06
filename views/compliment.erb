@@ -1,10 +1,11 @@
 <body style="background-color:<%= @color %>">
-
+<!-- onclick="location.href='/'" -->
 <br />
 <h1><%= @message %></h1>
 <br />
 <div><img src="<%= @image %>" /></div>
 <br />
 
-<button type="button" id="another" href="/">Another!</button>
-<body onclick="location.href='/'"></body>
+<a id="another" href="/">Another!</a>
+<br />
+<a id="share-link" href="/<%= @mess %>/<%= @col %>/<%= @img %>">Share Link</a>

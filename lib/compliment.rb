@@ -1,28 +1,23 @@
 class Compliment
 
-  attr_reader :image, :color
-  attr_accessor :message
+  attr_reader :message, :color, :image
 
-  IMAGES = [
-      "img/brad_pitt.gif",
-      "img/colbert_nothing_wrong.gif",
-      "img/patrick_stewart.gif",
-      "img/super_star.gif",
-      "img/nerd_cat.gif",
-      "img/weirdo.gif",
-      "img/beard.gif",
-      "img/urkle.gif",
-      "img/pharrell.gif",
-      "img/swag.gif",
-      "img/reno_pride.gif",
-      "img/thor.gif",
-      "img/omg.gif",
-      "img/love.gif",
-      "img/yay.gif",
-      "img/friend_dance.gif",
-      "img/tina_fey.gif"]
-  
-  COLORS = [
+  def make_hash_message
+    f = File.open('./lib/compliments.txt')
+    message_array = Array.new
+    f.each_line do |line| 
+      message_array << line
+    end
+    @message_hash = Hash.new
+    message_array.each_with_index do |line, idx|
+      idx +=1 
+      @message_hash[idx] = line
+    end
+    @message_hash
+  end
+
+  def make_hash_color
+    color_array = [
       "#007c7c",
       "#ff5b51",
       "#ff0079",
@@ -43,11 +38,51 @@ class Compliment
       "#75a3d1",
       "#eb65a0",   
       "#000000"]
-  
-  def initialize (compliment)
-    @message = compliment.sample
-    @image = IMAGES.sample
-    @color = COLORS.sample
+    @color_hash = Hash.new
+    color_array.each_with_index do |col, idx|
+      idx +=1 
+      @color_hash[idx] = col
+    end
+    @color_hash
+  end
+
+  def make_hash_image
+    image_array = [
+      "/img/brad_pitt.gif",
+      "/img/colbert_nothing_wrong.gif",
+      "/img/patrick_stewart.gif",
+      "/img/super_star.gif",
+      "/img/nerd_cat.gif",
+      "/img/weirdo.gif",
+      "/img/beard.gif",
+      "/img/urkle.gif",
+      "/img/pharrell.gif",
+      "/img/swag.gif",
+      "/img/reno_pride.gif",
+      "/img/thor.gif",
+      "/img/omg.gif",
+      "/img/love.gif",
+      "/img/yay.gif",
+      "/img/friend_dance.gif",
+      "/img/tina_fey.gif"]
+    @image_hash = Hash.new
+    image_array.each_with_index do |img, idx|
+      idx +=1 
+      @image_hash[idx] = img
+    end
+    @image_hash
+  end
+
+  def message
+    @message = @message_hash.to_a.sample
+  end
+
+  def color
+    @color = @color_hash.to_a.sample
+  end
+
+  def image
+    @image = @image_hash.to_a.sample
   end
 
 end

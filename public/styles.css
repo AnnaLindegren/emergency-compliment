@@ -14,5 +14,8 @@ h2 {
 }
 
 #another {
+  font: normal 22px 'Text Me One', sans-serif;
+}
+#share-link {
   font: normal 20px 'Text Me One', sans-serif;
 }
