@@ -22,5 +22,3 @@ end
 
 # my_compliments = Scraper.new('http://peoplearenice.blogspot.com/p/compliment-list.html')
 # puts my_compliments.get_compliments
-
-
